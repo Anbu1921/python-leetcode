@@ -6,15 +6,15 @@ class Solution:
 
         while left <= right:
             if abs(nums[left]) > abs(nums[right]):
-                result.append(nums[left])
+                results.append(nums[left] ** 2)
                 left += 1
             else:
-                result.append(nums[right])
-                right += 1
+                results.append(nums[right] ** 2)
+                right -= 1
         
-        result.reverse()
+        results.reverse()
 
-        return result
+        return results
 
         # Time: O(n)
         # Space: O(1)
